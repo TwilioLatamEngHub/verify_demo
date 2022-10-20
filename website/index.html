@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verify Demo</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="index.js" defer></script>
+    <script src="text.js" defer></script>
+
+  </head>
+
+  <body>
+    <img id="logo" src="assets/twilioLogo.png">
+    <div id="fillNumber" class="fillBox">
+        <div class="verify"><div class="verify_fill"></div><div class="verify_logo"></div></div>
+        <p id="label_phone_number"></p>
+        <input id="number" type="tel"></input>
+        
+        <div class="channelHolder">
+          <img class ="channelHolder_channel" src="assets/sms.png" id="sms">
+          <img class="channelHolder_channel" src="assets/whatsapp.png" id="whatsapp">
+        </div>
+
+        <button id="continue" type="button" class="btn"></button>
+    </div>
+
+    <div id="fillCode" class="fillBox">
+      <div class="verify"><div class="verify_fill"></div><div class="verify_logo"></div></div>
+      
+      <div>
+        <p id="label_type_code" style="display:inline"></p> <b id="channel"></b>:
+      </div>
+
+      <input id="code" maxlength="6" style="text-align: center"></input>
+
+      <button id="confirm" type="button" class="btn"></button>
+    </div>
+
+    <div id="confirmed" class="fillBox">
+      <div class="verify"><div class="verify_fill"></div><div class="check_icon"></div></div>
+      <p id="label_code_confirmed"></p>
+    </div>
+    <div id="incorrect" class="fillBox">
+      <div class="verify"><div class="verify_fill"></div><div class="cross_icon"></div></div>
+      <p id="label_wrong_code"></p>
+    </div>
+
+    <div id="settings" class="fillBox">
+      <div id="close_settings"></div>
+      <input name="logo" type="file" id="image-input" accept="image/jpeg, image/png, image/jpg">
+      <label for="logo">Logo</label>
+
+      <input name = "color" type="color" id="color-input"  >
+      <label for="color">Main Color</label>
+
+      <input name="contrast" type="color" id="contrast-input" >
+      <label for="contrast">Contrast Color/label>
+
+    </div>
+  </body>
+</html>
